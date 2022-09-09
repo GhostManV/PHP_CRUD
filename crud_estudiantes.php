@@ -20,7 +20,9 @@
             $query="UPDATE estudiantes SET carne='".$txt_carne."', nombres='".$txt_nombres."', apellidos='".$txt_apellidos."', direccion='".$txt_direccion."', telefono='".$txt_telefono."', correo_electronico='".$txt_correo_electronico."', id_tipo_sangre='".$txt_id_tipo_sangre."', fecha_nacimiento='".$txt_fecha_nacimiento."' WHERE id_estudiante='".$txt_id."';";
         }
         if(isset($_POST['btn_eliminar'])){
+            
             $query="DELETE FROM estudiantes WHERE id_estudiante='".$txt_id."';";
+            
         }
 
         if($db_conexion->query($query)){
